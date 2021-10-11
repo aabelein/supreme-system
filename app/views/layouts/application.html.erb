@@ -10,6 +10,81 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="row">
+      <div class="col-3">
+        <%= link_to root_path, class: 'logo' do %>
+        <div class="circle">
+          <br />
+          You know
+          <br />
+          you love
+          <br />
+          music
+        </div>
+        <% end %>
+      </div>
+      <div class="col-9">
+        <div class="slogan">
+          Loving music since 1985
+        </div>
+        <div class="links">
+          <!-- Button trigger modal -->
+          <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#exampleModal'} %>
+          &nbsp;&nbsp;
+          <%= link_to 'About', about_path %>
+    </div>
+  </div>
+</header>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModal"></h5>
+              <h4 class="modal-title" id="exampleModal">Contribute Your Quote</h4>
+      </div>
+      <%= simple_form_for Quote.new do |f| %>
+        <div class="modal-body">
+          <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Love is friendship set to music" %>
+          <br />
+          <%= f.input :author, label: "Who is the author of the quote?", placeholder: "Jackson Pollock" %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit 'Create', class: 'btn btn-danger' %>
+        </div>
+        <% end %>             
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<hr />
+
+<br class="clear" />
+
+<div class="container">
+  <% if flash[:error].present? %>
+    <div class="col-10 offset-1 alert-danger">
+    <%= flash[:error].html_safe %>
+  </div>
+  <% end %>
+   <%= yield %>
+  </div>
+   
+   <div class="footer">
+     <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+        </div>
+        <div class="col-12 col-sm-6 footer-blurb">
+          Music lover <a href="https://passionatenewfield.netlify.app/">Ariel Abelein</a><br />
+        </div>
+     </div>
+   </div>
   </body>
 </html>

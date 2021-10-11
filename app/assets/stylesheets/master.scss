@@ -1,0 +1,106 @@
+
+@import "bootstrap";
+
+.clear {
+	clear: both;
+}
+
+.circle {
+	font-weight: bold;
+	font-style: italic;
+	border-radius: 100%;
+	background: #A88AB2;
+	border: 1px solid #F7F7F7;
+	width: 80px;
+	heighth: 80px;
+	margin: 10pm 10px;
+    text-align: center;
+    color: #FFF;
+    font-size: 10px;
+    line-height: 16px;
+    cursor: pointer;
+    transform: rotate(11deg);
+    -ms-transform: roate(11deg); /* IE 9 */
+    -webkit_transform: rotate(11deg); /* Opera, Chrome, and Safari */
+}
+
+.slogan {
+	font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garmond, "Apple Garmond", "ITC Garmond Narrow", "New Century Schoolbook";
+	font-style: italic;
+	padding-top: 26px;
+}
+
+.links {
+	padding-top: 26px;
+	text-align: right;
+	padding-right: 26px;
+}
+
+.links a {
+	color: black;
+	font-size: 25px;
+	border-bottom: 1px solid #dfdfdf;
+	font-family: 'quicksandlight_italic', cursive;
+	font-weight: bold;
+}
+
+header {
+	border-top: 9px solid #222222;
+}
+
+hr {
+	clear: both;
+}
+
+h1 {
+	font-family: 'quicksandlight_italic', cursive;
+	font-weight: bold;
+	font-size: 48px;
+	}
+
+h2 {
+	font-family: 'quicksandlight_italic', cursive;
+}
+
+.next-quote {
+	color: #f84342;
+	font-family: 'Helvetica';
+}
+
+.footer-blurb {
+	font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garmond", "ITC Garmond Narrow", "New Century Schoolbook";
+	font-style: italic;
+	text-align: right;
+	font-size: 10px;
+}
+
+.logo:hover {
+	text-decoration: none;
+}
+
+.about {
+	font-family: "Palatino Linotype", "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Gartamond, "Apple Garamond", "ITC Garamound Narrow", "New Century Schoolbook"
+}
+
+@media (max-width: 750px) {
+	.footer-blurb {
+	text-align: left;
+	}
+}
+
+.modal {
+	font-family: "Palatino Linotype", "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Gartamond, "Apple Garamond", "ITC Garamound Narrow", "New Century Schoolbook"
+}
+
+h2 span {
+	color: #AC90B1;
+	font-family: 'quicksandlight_italic', cursive;
+}
+
+::selection {
+	background-color: #f84342;
+}
+
+.quote-saying {
+	margin-top: 100px;
+}
